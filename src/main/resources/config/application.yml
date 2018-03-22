@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+    profiles:
+      active: "dev"
+    main:
+      banner-mode: "off"
+
+## if database already exists, then set it to true
+#management:
+#    endpoint:
+#        flyway:
+#          enabled: true
+
+logging:
+    level:
+        com:
+            javarightnow:
+              reservation: debug
+        org:
+            springframework: error
+        root: WARN
+    pattern:
+        console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+        file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: logs/reservationapplication.log

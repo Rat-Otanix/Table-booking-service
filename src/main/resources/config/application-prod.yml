@@ -1,0 +1,25 @@
+spring:
+  jpa:
+      show-sql: false
+  datasource:
+      tomcat:
+          max-active: 50
+          max-idle: 20
+          max-wait: 20000
+          min-idle: 15
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reservation?useUnicode=yes&characterEncoding=UTF-8
+      username: reservationuser
+      password: Reserv1!pass
+logging:
+    level:
+        com:
+            javarightnow:
+              reservation: WARN
+        org:
+            springframework:
+                security: ERROR
+                web: ERROR
+        root: WARN
+server:
+  port: 80

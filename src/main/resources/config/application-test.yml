@@ -1,0 +1,12 @@
+spring:
+  flyway:
+      locations: classpath:/data/test/migrations
+  jpa:
+      database: hsql
+      show-sql: true
+      hibernate:
+          ddl-auto: validate
+      open-in-view: true
+#        use-new-id-generator-mappings: true
+
+
